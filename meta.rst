@@ -39,3 +39,19 @@ A Lisp primer
 
 Metaprogramming in Lisp
 =======================
+
+Metaprogramming in Python
+=========================
+
+- function decorators
+- class decorators
+- metaclasses
+- why one and why the other? (implicit vs explicit)
+
+Decorators
+==========
+
+Metaclasses
+===========
+
+Difference between Python2 and Python3? (maybe or maybe not)
