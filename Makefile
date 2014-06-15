@@ -12,18 +12,18 @@ ALLSPHINXOPTS   =  $(PAPEROPT_$(PAPER)) $(SPHINXOPTS)
 I18NSPHINXOPTS  = $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) .
 DROP = $(HOME)/Dropbox/Public/talks
 
-.PHONY: unit clean upload
-
-all: test unit upload
+all: test meta upload
 
 test:
-	nosetests3 code/test_meta.py
+	nosetests3 code/python
 
 upload:
 	cp -Rv $(BUILDDIR) $(DROP)/
 
-unit:
+meta:
 	$(SPHINXBUILD) -b slides $(ALLSPHINXOPTS) . $(BUILDDIR)
 
 clean:
 	-rm -rf $(BUILDDIR)
+
+.PHONY: meta clean upload
