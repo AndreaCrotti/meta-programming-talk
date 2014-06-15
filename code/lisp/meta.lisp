@@ -29,4 +29,23 @@
   (get-from-list list <))
 
 
-;TODO: define your own loop or add some smart syntax
+;; http://cl-cookbook.sourceforge.net/macros.html
+; possible implementation of a for loop using a macro
+
+(defmacro for (listspec exp)
+   (cond ((and (= (length listspec) 3)    ; list has three elements
+               (symbolp (car listspec))   ; first element is a symbol
+               (eq (cadr listspec) ':in)) ; second element is symbol :in
+          `(mapcar (lambda (,(car listspec)) ; Map the expression to the list
+                      ,exp)
+                   ,(caddr listspec)))
+         (t (error "Ill-formed: %s" `(for ,listspec ,exp)))))
+
+(for (x :in l)
+   (let ((y (hairy-fun1 x)) (z (hairy-fun2 x)))
+      (dolist (y1 y)
+         (dolist (z1 z) 
+           
+           ))))
+
+
