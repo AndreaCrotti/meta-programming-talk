@@ -5,8 +5,6 @@ Implement a very simple Django-like Model with meta classes
 
 class MetaModel(type):
     def __new__(mcl, name, bases, classdict):
-        # TODO: replace the __init__ of the class that we are changing
-        # with an init that takes arguments in a more flexible way
         keywords = {}
         for attr, val in classdict.items():
             if isinstance(val, Field):
