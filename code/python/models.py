@@ -11,13 +11,16 @@ class MetaModel(type):
                 keywords[attr] = val
 
         def new_init(self, **kwargs):
-            assert set(kwargs).issubset(set(keywords)), "Wrong arguments %s" % str(kwargs)
+            unknown = set(kwargs) - set(keywords)
+            if len(unknown) > 0:
+                raise Exception("Unknown arguments %s" % str(unknown))
+
             for key, val in kwargs.items():
                 new_val = keywords[key].__class__(value=val)
                 setattr(self, key, new_val)
 
         classdict['__init__'] = new_init
-        return type.__new__(mcl, name, bases, classdict)
+        return super().__new__(mcl, name, bases, classdict)
 
 
 class Field:
