@@ -11,6 +11,7 @@ class Simple(models.Model):
 class TestModels(unittest.TestCase):
     def test_model_attribute_create_fields(self):
         s = Simple(y="Hello world")
+        # TODO: have a look at setter and getter to make it even smarter
         self.assertEqual(s.y, "Hello world")
         self.assertEqual(s.x, 0)
 
