@@ -10,7 +10,7 @@ class MetaModel(type):
             if isinstance(val, Field):
                 keywords[attr] = val
 
-        def new_init(self, **kwargs):
+        def init(self, **kwargs):
             unknown = set(kwargs) - set(keywords)
             if len(unknown) > 0:
                 raise Exception("Unknown arguments %s" % str(unknown))
@@ -19,7 +19,7 @@ class MetaModel(type):
                 new_val = keywords[key].__class__(value=val)
                 setattr(self, key, new_val)
 
-        classdict['__init__'] = new_init
+        classdict['__init__'] = init
         return super().__new__(mcl, name, bases, classdict)
 
 

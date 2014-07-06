@@ -192,6 +192,8 @@ Defining Models
 .. Every web framework allows to define models in a nice and compact way.
 .. Let's see how we can define a model without having meta classes.
 
+.. Every web framework or ORM uses similar techniques to speed up development time.
+
 .. literalinclude:: code/python/models.py
    :pyobject: ModelNoMeta
 
@@ -222,13 +224,27 @@ Models metaclass
 .. literalinclude:: code/python/models.py
    :pyobject: MetaModel
 
+Enforce good practices
+======================
+
+.. Another interesting example of metaclasses is whenever you want to enforce good practices
+
+Debugging and monitoring
+========================
+
+
 Macropy
 =======
 
 .. TODO: show some shocking examples about it
 
-Bibliography
-============
+Questions
+=========
+
+.. TODO: thanks and put maybe again the slide about recruiting
+
+Useful resources
+================
 
 .. _`what made lisp different`: http://www.paulgraham.com/diff.html
 .. _`revenge of the nerds`: http://www.paulgraham.com/icad.html
@@ -237,3 +253,12 @@ Bibliography
 .. _`python decorators and lisp macros`: http://programmers.stackexchange.com/questions/213858/python-decorators-and-lisp-macros
 .. _`metaprogramming answer`: http://stackoverflow.com/questions/2565572/metaprogramming-self-explanatory-code-tutorials-articles-books/2566561#2566561
 .. _`python-3-patterns-metaprogramming`: http://python-3-patterns-idioms-test.readthedocs.org/en/latest/Metaprogramming.html
+
+- `what made lisp different`_
+- `revenge of the nerds`_
+- `homoiconity is not the point`_
+- `metaprogramming by examples`_
+- `python decorators and lisp macros`_
+- `metaprogramming answer`_
+- `python-3-patterns-metaprogramming`_
+
