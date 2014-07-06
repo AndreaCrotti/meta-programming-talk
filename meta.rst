@@ -238,6 +238,16 @@ Macropy
 
 .. TODO: show some shocking examples about it
 
+From macropy_ website:
+
+MacroPy is an implementation of Syntactic Macros in the Python Programming Language. MacroPy provides a mechanism for user-defined functions (macros) to perform transformations on the abstract syntax tree (AST) of a Python program at import time.
+
+This is an easy way to enhance the semantics of a Python program in ways which are otherwise impossible, for example providing an extremely concise way of declaring classes:
+
+**Not Python3 compatible**
+
+.. and probably very hard to port
+
 Questions
 =========
 
@@ -253,6 +263,7 @@ Useful resources
 .. _`python decorators and lisp macros`: http://programmers.stackexchange.com/questions/213858/python-decorators-and-lisp-macros
 .. _`metaprogramming answer`: http://stackoverflow.com/questions/2565572/metaprogramming-self-explanatory-code-tutorials-articles-books/2566561#2566561
 .. _`python-3-patterns-metaprogramming`: http://python-3-patterns-idioms-test.readthedocs.org/en/latest/Metaprogramming.html
+.. _macropy: https://github.com/lihaoyi/macropy
 
 - `what made lisp different`_
 - `revenge of the nerds`_
@@ -261,4 +272,3 @@ Useful resources
 - `python decorators and lisp macros`_
 - `metaprogramming answer`_
 - `python-3-patterns-metaprogramming`_
-
