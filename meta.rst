@@ -9,29 +9,50 @@ Twitter: @andreacrotti
 
 Slides: https://github.com/AndreaCrotti/meta
 
-Working for Depop
+JOIN US @Depop
+==============
+
+.. image:: images/hiring.png
+    :height: 600
+    :width: 800
+    :alt: hiring
+
 
 Agenda
 ======
 
 - What is metaprogramming
-- An historical perspective
-- The real meta language
+- Metaprogramming in Lisp
 - Meta programming in Python
 
   + decorators
   + meta classes
-  + macros (intro to the bytecode first?)
+  + macros
 
 
 Metaprogramming
 ===============
 
+.. TODO: make it centered and prominent
+
+Metaprogramming is the writing of computer programs that write or manipulate other programs (or themselves) as their data, or that do part of the work at compile time that would otherwise be done at runtime.
+
+.. TODO: add what is the goal of metaprogramming
+
 A Lisp primer
 =============
 
+.. TODO: the reason why I want to show some Lisp
+
 - why we show Lisp code
 - explain the homoconoic thing
+
+.. TODO: show a simple Lisp function
+
+.. code::
+
+   (defun factorial(n) 
+     (if (<= n 1) 1 (* n (factorial (- n 1)))))
 
 Lisp
 ====
@@ -71,6 +92,11 @@ Lisp Evaluation
 - EVAL
 - PRINT
 - LOOP
+
+.. digraph:: repl
+
+   READ -> EVAL -> PRINT -> READ
+
 
 
 Lisp macros
