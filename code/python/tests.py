@@ -1,6 +1,6 @@
 import unittest
 
-from . import models, timers
+from . import models, timers, good_practice
 
 
 class Simple(models.Model):
@@ -40,3 +40,11 @@ class TestTime(unittest.TestCase):
     def test_timer_print(self):
         val = timers.timeit_print(to_time)()
         self.assertEqual(val, 42)
+
+
+class TestForceCallingSuper(unittest.TestCase):
+    def test_super_call(self):
+        good_practice.SubClassWithSuper()
+
+        with self.assertRaises(AssertionError):
+            good_practice.SubClassForgotSuper()
