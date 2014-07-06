@@ -1,6 +1,6 @@
 import unittest
 
-from . import models
+from . import models, timers
 
 
 class Simple(models.Model):
@@ -24,3 +24,16 @@ class TestFields(unittest.TestCase):
     def test_value_overrides_default(self):
         mod = models.Integer(value=0, default=1)
         self.assertEqual(mod, 0)
+
+
+
+def to_time():
+    return 42
+
+
+class TestTime(unittest.TestCase):
+    def test_timer(self):
+        val, time = timers.timeit(to_time)()
+        self.assertEqual(val, 42)
+        self.assertTrue(time.microseconds > 0)
+
