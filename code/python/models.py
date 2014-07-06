@@ -41,3 +41,10 @@ class String(Field):
 
 class Model(object, metaclass=MetaModel):
     pass
+
+
+class ModelNoMeta(object):
+    def __init__(self, x=1, y=""):
+        self.x = x
+        # TODO: add a type check that you are passing the right thing!
+        self.y = y

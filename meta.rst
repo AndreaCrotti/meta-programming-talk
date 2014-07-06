@@ -132,6 +132,10 @@ Metaprogramming in Python
 - metaclasses
 - why one and why the other? (implicit vs explicit)
 
+.. TODO: add also about descriptors, Dynamic Code generation and AST manipulation
+.. TODO: also remember that the more in depth you go (see AST) the more likely
+   to have things that only work on a certain implementation
+
 Decorators
 ==========
 
@@ -157,6 +161,71 @@ Equivalent to:
 
     C = type('C', (), {})
 
+Create a method as well
+
+
+.. (Metaclass is the type of the class as a class is the type of an instance).
+
+Metaclass -> Class
+Class -> Instance
+
+Metaclass definition
+====================
+
+Just subclass *type*.
+What are the important methods to use?
+
+.. literalinclude:: code/python/meta.py
+    :pyobject: SimpleMeta
+
+.. code:: python
+
+   class UseMeta(object, metaclass=SimpleMeta):
+       pass
+
+Defining Models
+===============
+
+.. Now we are going to look at an example of something that I think
+   everyone used, a model definition.
+
+.. Every web framework allows to define models in a nice and compact way.
+.. Let's see how we can define a model without having meta classes.
+
+.. literalinclude:: code/python/models.py
+   :pyobject: ModelNoMeta
+
+- too verbose!
+- too much boilerplate
+- no type information
+- implicit defaults
+
+Defining Models (2)
+===================
+
+.. literalinclude:: code/python/tests.py
+   :pyobject: Simple
+
+.. literalinclude:: code/python/tests.py
+   :pyobject: TestModels
+
+
+Fields
+======
+
+.. literalinclude:: code/python/models.py
+   :pyobject: Field
+
+Models metaclass
+================
+
+.. literalinclude:: code/python/models.py
+   :pyobject: MetaModel
+
+Macropy
+=======
+
+.. TODO: show some shocking examples about it
 
 Bibliography
 ============
