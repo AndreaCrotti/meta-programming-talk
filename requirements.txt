@@ -5,3 +5,4 @@ Sphinx==1.2.2
 docutils==0.11
 hieroglyph==0.6.5
 six==1.7.2
+mock==1.0.1

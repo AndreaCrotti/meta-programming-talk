@@ -1,15 +1,20 @@
+"""
+Suppose we never want to have listdir to do something specific
+"""
+
 # TODO: this can be put together with the other example
 
+from mock import patch
 from unittest import TestCase
 
 
-class TestMeta(type(TestCase)):
+class TestMeta(type):
     def __new__(mcls, name, bases, dct):
         to_patch = []
 
-        for methname, meth in dct.items():
-            if methname.startswith('test') and callable(meth):
-                to_patch.append(methname)
+        for attrname, attr in dct.items():
+            if attrname.startswith('test') and callable(attr):
+                to_patch.append(attrname)
 
         cls = type.__new__(mcls, name, bases, dct)
         for methname in to_patch:
@@ -20,9 +25,7 @@ class TestMeta(type(TestCase)):
         return cls
 
 
-class PatchedTestCase(TestCase):
-    __metaclass__ = TestMeta
-
+class PatchedTestCase(TestCase=TestMeta):
     @classmethod
     def patch_method(cls, meth):
         pass

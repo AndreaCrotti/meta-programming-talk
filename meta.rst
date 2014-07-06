@@ -139,7 +139,8 @@ Metaprogramming in Python
 Decorators
 ==========
 
-.. TODO: decorators are in Python just nice syntactic sugar
+.. TODO: explain something about higher level functions and partial application
+.. TODO: decorators are in Python just nice syntactic sugar for higher order functions
 
 - function decorators
 - class decorators
@@ -165,6 +166,10 @@ Timers
 
 Timers (2)
 ==========
+
+.. It is particularly important to do this change only at run-time because
+.. this decorator actually changes the behavior of the decorated function
+.. making it return something different than it originally did.
 
 .. literalinclude:: code/python/timers.py
    :pyobject: timeit_change_signature
@@ -197,8 +202,11 @@ Create a method as well
 
 .. (Metaclass is the type of the class as a class is the type of an instance).
 
-Metaclass -> Class
-Class -> Instance
+**Metaclass -> Class**
+
+As
+
+**Class -> Instance**
 
 Metaclass definition
 ====================
