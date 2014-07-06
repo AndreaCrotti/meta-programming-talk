@@ -1,22 +1,31 @@
 from datetime import datetime
+from functools import wraps
 
 
-def timeit(func):
-    def _timeit(*args, **kwargs):
+def timeit_change_signature(func):
+    """Change the signature of the decorated function returning the time
+    of execution as first element in the return tuple
+    """
+    @wraps(func)
+    def _timeit_change_signature(*args, **kwargs):
         before = datetime.utcnow()
         ret = func(*args, **kwargs)
         after = datetime.utcnow()
         return ret, after - before
 
-    return _timeit
+    return _timeit_change_signature
 
 
-def long_function():
-    for _ in range(10000):
-        pass
+def timeit_print(func):
+    """Print out the execution time of the decorated function
+    """
+    @wraps(func)
+    def _timeit_print(*args, **kwargs):
+        before = datetime.utcnow()
+        ret = func(*args, **kwargs)
+        after = datetime.utcnow()
+        print("Function {} took {} seconds to run".format(func, after - before))
+        return ret
 
+    return _timeit_print
 
-if __name__ == '__main__':
-    ln, time = timeit(long_function)()
-    assert ln is None
-    assert time.microseconds > 0

@@ -32,8 +32,11 @@ def to_time():
 
 
 class TestTime(unittest.TestCase):
-    def test_timer(self):
-        val, time = timers.timeit(to_time)()
+    def test_timer_change_signature(self):
+        val, time = timers.timeit_change_signature(to_time)()
         self.assertEqual(val, 42)
         self.assertTrue(time.microseconds > 0)
 
+    def test_timer_print(self):
+        val = timers.timeit_print(to_time)()
+        self.assertEqual(val, 42)
