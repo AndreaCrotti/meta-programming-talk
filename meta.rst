@@ -231,7 +231,11 @@ Defining Models
 .. Every web framework allows to define models in a nice and compact way.
 .. Let's see how we can define a model without having meta classes.
 
-.. Every web framework or ORM uses similar techniques to speed up development time.
+.. Every web framework or ORM uses similar techniques to define database model
+.. straight away from Python.
+
+.. In fact even if Python is dynamically typed a database is not, so if we want
+.. to define the database schema in Python we need to give type information
 
 .. literalinclude:: code/python/models.py
    :pyobject: ModelNoMeta

@@ -25,6 +25,14 @@ class TestFields(unittest.TestCase):
         mod = models.Integer(value=0, default=1)
         self.assertEqual(mod, 0)
 
+    def test_setting_wrong_type_field_init_time_fails(self):
+        with self.assertRaises(TypeError):
+            models.String(value=100)
+
+    def test_changing_field_at_runtime_wrong_type_fields(self):
+        sampl = models.String(value="hello")
+        with self.assertRaises(TypeError):
+            sampl.value = 100
 
 
 def to_time():

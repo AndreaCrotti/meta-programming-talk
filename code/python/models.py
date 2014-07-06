@@ -24,19 +24,34 @@ class MetaModel(type):
 
 
 class Field:
+    BASE_TYPE = None
+
     def __init__(self, value=None, default=None):
         self.value = value if value is not None else default
+
+    @property
+    def value(self):
+        return self._value
+
+    @value.setter
+    def value(self, value):
+        self._value = value
+        self._check_type()
+
+    def _check_type(self):
+        if self.value and not isinstance(self.value, self.BASE_TYPE):
+            raise TypeError
 
     def __eq__(self, other):
         return self.value == other
 
 
 class Integer(Field):
-    pass
+    BASE_TYPE = int
 
 
 class String(Field):
-    pass
+    BASE_TYPE = str
 
 
 class Model(object, metaclass=MetaModel):
