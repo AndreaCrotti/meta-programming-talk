@@ -3,8 +3,9 @@ from functools import wraps
 
 
 def timeit_change_signature(func):
-    """Change the signature of the decorated function returning the time
-    of execution as first element in the return tuple
+    """Change the signature of the decorated function
+    returning the time of execution as first element in the
+    return tuple
     """
     @wraps(func)
     def _timeit_change_signature(*args, **kwargs):

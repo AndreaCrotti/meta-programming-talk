@@ -1,3 +1,12 @@
+"""
+
+This use case comes from the implementation of threading, where
+the way the init check is done is by checking in every method or
+property for __initialized, which is not very nice to maintain
+
+"""
+
+
 class CheckInit(type):
     def __new__(mcs, name, bases, classdict):
         original_init = classdict['__init__']
@@ -14,6 +23,7 @@ class Base(metaclass=CheckInit):
     flag_variable = 'var'
 
     def __init__(self):
+        # TODO: try to use a boolean variable instead for this
         self.var = 42
 
 

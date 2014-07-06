@@ -31,11 +31,25 @@ def to_time():
     return 42
 
 
+def to_time2():
+    for _ in range(100000):
+        pass
+
+    return 42
+
+
 class TestTime(unittest.TestCase):
     def test_timer_change_signature(self):
         val, time = timers.timeit_change_signature(to_time)()
         self.assertEqual(val, 42)
         self.assertTrue(time.microseconds > 0)
+
+    def test_implementation_1_faster(self):
+        val1, time1 = timers.timeit_change_signature(to_time)()
+        val2, time2 = timers.timeit_change_signature(to_time2)()
+        self.assertEqual(val1, 42)
+        self.assertEqual(val2, 42)
+        self.assertLess(time1, time2)
 
     def test_timer_print(self):
         val = timers.timeit_print(to_time)()

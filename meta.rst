@@ -139,6 +139,37 @@ Metaprogramming in Python
 Decorators
 ==========
 
+.. TODO: decorators are in Python just nice syntactic sugar
+
+- function decorators
+- class decorators
+
+.. they can be used to modify at compile or run-time the behaviour of a class/function
+
+Timers
+======
+
+.. I think there are no doubts that the first implementation is faster than the second
+.. implementation, but can I prove it in a repeatable test without modifying the functions?
+.. while checking at the same time that both functions return the same value?
+
+.. literalinclude:: code/python/tests.py
+    :pyobject: to_time
+
+.. literalinclude:: code/python/tests.py
+    :pyobject: to_time2
+
+.. literalinclude:: code/python/tests.py
+    :pyobject: TestTime.test_implementation_1_faster
+
+
+Timers (2)
+==========
+
+.. literalinclude:: code/python/timers.py
+   :pyobject: timeit_change_signature
+
+
 Metaclasses
 ===========
 
