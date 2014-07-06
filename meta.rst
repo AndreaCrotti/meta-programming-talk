@@ -2,24 +2,41 @@
 Meta Programming
 ================
 
-.. TODO: have a look at org-gcal for syncing things around
 .. TODO: check why slime is not loading correctly
 
-Twitter: @andreacrotti
+.. hi everyone I am Andrea Crotti and I'm going to talk you today about Metaprogramming.
+.. you can find me on twitter here and you can also find the source of these slides
+.. and all the code I am going to show now there.
+
+.. You are more than welcome to checkout the repository and play around with the examples
+.. there since I will do a lot of live coding.
+.. Just be aware that all the examples (except macropy) are for Python3, so make sure you have
+.. a Python 3 interpreter available.
+
+Twitter: **@andreacrotti**
 
 Slides: https://github.com/AndreaCrotti/meta
 
 JOIN US @Depop
 ==============
 
+.. As first disclaimer I work for Depop, an exciting startup in the London silicon
+.. roundabout and we are hiring backend Python developers, come and
+   talk with me or check out the link there if you are interested.
+
 .. image:: images/hiring.png
     :height: 600
     :width: 800
     :alt: hiring
 
+.. _hiring: http://depop.com/jobs
+
+hiring_
 
 Agenda
 ======
+
+.. We are first 
 
 - What is metaprogramming
 - Metaprogramming in Lisp
@@ -291,6 +308,13 @@ This is an easy way to enhance the semantics of a Python program in ways which a
 
 .. and probably very hard to port
 
+Conclusion
+==========
+
+- metaprogramming is fun
+- the code to implement ORM-style models fits in a slide
+- handle **with care**
+
 Questions
 =========
 
@@ -315,3 +339,5 @@ Useful resources
 - `python decorators and lisp macros`_
 - `metaprogramming answer`_
 - `python-3-patterns-metaprogramming`_
+
+.. TODO: add a link about the other decorator talks
