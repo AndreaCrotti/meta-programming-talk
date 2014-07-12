@@ -111,8 +111,9 @@ A Lisp primer
 
    ;; s-expression to evaluate factorial of 10
    (factorial 10)
-   
-Here I'm using sbcl_ as interpreter.
+
+.. TODO: for my examples I'm just showing SBCL but any common lisp interpreter
+.. will do
 
 Lisp
 ====
@@ -124,6 +125,10 @@ Lisp
    for data and code.  S-expressions can be read with the primitive
    Lisp function READ, which returns Lisp data: lists, symbols numbers
    and strings.
+
+   (so everything has to be one of these things, and the
+   transformation from the source code to the final internal
+   representation is as simple as possible)
 
    Then EVAL computes side effects and return a result, and the result
    is printed by PRINT.
@@ -140,6 +145,8 @@ Lisp
 
 .. In this case above here '* becomes a symbol, and 'sin as well
 .. while the other values are just parsed as numbers as they are
+
+.. When all the functions are infix it is much easier
 
 Lisp Evaluation
 ===============
@@ -161,14 +168,54 @@ Lisp Evaluation
    READ -> EVAL -> PRINT;
    PRINT -> READ [label="LOOP"];
 
+.. code:: cl
 
-Lisp macros
-===========
+   (* 2 (+ 3 4))
+
+.. image:: images/s_expression.png
+    :height: 200
+    :alt: s_expression
 
 Metaprogramming in Lisp
 =======================
 
-.. Thanks
+.. So now let's get to the real reason why I talked to you about Lisp
+.. which is the way you can do meta programming with it.
+
+.. Thanks to the fact that Lisp is Homoiconic as we have seen before
+.. Lisp has probably the most powerful way to do meta programming,
+.. which is Lisp macros.
+.. In lisp we have a function called setq to assign variables.
+
+.. code:: cl
+
+    (setq x 10)
+
+    ;; I should be able to do
+    (setq2 x y 10)
+
+.. while this example is very silly maybe keep in mind that setq is
+   the way we assign variables basically, so it would like defining
+   another way to do assignment in Python to make a parallel.
+
+.. code:: cl
+
+   (defun setq2F (x y z)
+         (progn (setq x z) (setq y z)))
+
+Macros
+======
+
+.. How can we do the same thing with a macro
+
+.. code:: cl
+
+   (defmacro setq2 (v1 v2 e)
+       `(progn (setq ,v1 ,e) (setq ,v2 ,e)))
+
+
+.. literalinclude:: code/python/meta.py
+   :pyobject: setq2
 
 Metaprogramming in Python
 =========================
@@ -365,6 +412,7 @@ Useful resources
 .. _`python-3-patterns-metaprogramming`: http://python-3-patterns-idioms-test.readthedocs.org/en/latest/Metaprogramming.html
 .. _macropy: https://github.com/lihaoyi/macropy
 .. _sbcl: http://www.sbcl.org/
+.. _`roots of lisp`: http://www.paulgraham.com/rootsoflisp.html
 
 - `what made lisp different`_
 - `revenge of the nerds`_
@@ -374,5 +422,6 @@ Useful resources
 - `metaprogramming answer`_
 - `python-3-patterns-metaprogramming`_
 - `sbcl_`
+- `roots of lisp`_
 
 .. TODO: add a link about the other decorator talks
