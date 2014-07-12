@@ -452,24 +452,12 @@ Enforce good practices 2
    :pyobject: CheckInit
 
 
-Debugging and monitoring
-========================
+.. TODO: this can be a bonus it's not really necessary for now
+..
+   Debugging and monitoring
+   ========================
 
 
-Macropy
-=======
-
-.. TODO: show some shocking examples about it
-
-From macropy_ website:
-
-MacroPy is an implementation of Syntactic Macros in the Python Programming Language. MacroPy provides a mechanism for user-defined functions (macros) to perform transformations on the abstract syntax tree (AST) of a Python program at import time.
-
-This is an easy way to enhance the semantics of a Python program in ways which are otherwise impossible, for example providing an extremely concise way of declaring classes:
-
-**Not Python3 compatible**
-
-.. and probably very hard to port
 
 Conclusion
 ==========
@@ -508,3 +496,18 @@ Useful resources
 - `roots of lisp`_
 
 .. TODO: add a link about the other decorator talks
+
+Macropy
+=======
+
+.. TODO: show some shocking examples about it
+
+From macropy_ website:
+
+MacroPy is an implementation of Syntactic Macros in the Python Programming Language. MacroPy provides a mechanism for user-defined functions (macros) to perform transformations on the abstract syntax tree (AST) of a Python program at import time.
+
+This is an easy way to enhance the semantics of a Python program in ways which are otherwise impossible, for example providing an extremely concise way of declaring classes:
+
+**Not Python3 compatible**
+
+.. and probably very hard to port
