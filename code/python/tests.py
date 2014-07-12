@@ -1,6 +1,6 @@
 import unittest
 
-from . import models, timers, good_practice
+from . import models, timers, good_practice, decorators
 
 
 class Simple(models.Model):
@@ -70,3 +70,13 @@ class TestForceCallingSuper(unittest.TestCase):
 
         with self.assertRaises(AssertionError):
             good_practice.SubClassForgotSuper()
+
+
+class TestAddMethod(unittest.TestCase):
+    def test_add_method_to_class(self):
+
+        @decorators.add_response
+        class Cls:
+            pass
+
+        self.assertEqual(Cls().response(), 42)

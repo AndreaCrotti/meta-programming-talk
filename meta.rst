@@ -240,6 +240,10 @@ Macros
 .. literalinclude:: code/python/meta.py
    :pyobject: setq2
 
+.. In Lisp as in Python always keep in mind that meta programming is the
+.. ultimate resource and it should be used only if you know what you're doing
+.. even if used well it will help a lot.
+
 Metaprogramming in Python
 =========================
 
@@ -247,10 +251,15 @@ Metaprogramming in Python
 
 .. Is Python homoiconic?
 
+.. we now are going to show some examples of meta programming in Python
+.. using function decorators, class decorators and meta classes
+
 - function decorators
 - class decorators
 - metaclasses
-- why one and why the other? (implicit vs explicit)
+- AST manipulation?
+
+.. - why one and why the other? (implicit vs explicit)
 
 .. TODO: add also about descriptors, Dynamic Code generation and AST manipulation
 .. TODO: also remember that the more in depth you go (see AST) the more likely
@@ -265,7 +274,25 @@ Decorators
 - function decorators
 - class decorators
 
-.. they can be used to modify at compile or run-time the behaviour of a class/function
+.. centered:: Just syntactic sugar
+
+.. code:: python
+
+    @decorator
+    def function():
+        pass
+
+**Equivalent to:**
+
+.. code:: python
+
+    def function():
+        pass
+
+    function = decorator(function)
+
+.. While one changes the behaviour of function at import time we can also use
+.. the same decorator to change the behaviour of the function at run time.
 
 Timers
 ======
@@ -294,6 +321,17 @@ Timers (2)
 .. literalinclude:: code/python/timers.py
    :pyobject: timeit_change_signature
 
+.. TODO: should I show an example of class decorator??
+
+Decorated class
+===============
+
+.. literalinclude:: code/python/tests.py
+   :pyobject: TestAddMethod.test_add_method_to_class
+
+
+.. literalinclude:: code/python/decorators.py
+   :pyobject: add_response
 
 Metaclasses
 ===========
