@@ -15,12 +15,12 @@ Meta Programming
 
 Twitter: **@andreacrotti**
 
-Slides: https://github.com/AndreaCrotti/meta
+Slides and code: https://github.com/AndreaCrotti/meta
 
 JOIN US @Depop
 ==============
 
-.. As first disclaimer I work for Depop, an exciting startup in the London silicon
+.. I work for Depop, an exciting startup in the London silicon
 .. roundabout and we are hiring backend Python developers, come and
    talk with me or check out the link there if you are interested.
 
@@ -36,10 +36,16 @@ hiring_
 Agenda
 ======
 
-.. We are first 
+.. So today we are going to talk about metaprogramming, first by looking at the definition
+.. the giving a very quick taste of Lisp and what metaprogramming means in Lisp
+.. and then finally switching to Python and showing how to achieve it with Python.
 
 - What is metaprogramming
 - Metaprogramming in Lisp
+
+  + homoiconocity
+  + macros
+
 - Meta programming in Python
 
   + decorators
@@ -50,16 +56,15 @@ Agenda
 Metaprogramming
 ===============
 
-.. TODO: make it centered and prominent
+.. So the definition from Wikipedia is 
 
-Metaprogramming is the writing of computer programs that write or manipulate other programs (or themselves) as their data, or that do part of the work at compile time that would otherwise be done at runtime.
+.. centered::
+   Metaprogramming is the writing of computer programs that write or manipulate other programs (or themselves) as their data, or that do part of the work at compile time that would otherwise be done at runtime.
 
-Goals of metaprogramming:
+*Goals of metaprogramming*:
 
 - minimize SLOC
 - gives programs greater flexibility
-
-(Wikipedia)
 
 .. TODO: add what is the goal of metaprogramming
 
