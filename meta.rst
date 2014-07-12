@@ -43,7 +43,7 @@ Agenda
 - What is metaprogramming
 - Metaprogramming in Lisp
 
-  + homoiconocity
+  + homoiconicity
   + macros
 
 - Meta programming in Python
@@ -91,11 +91,11 @@ A Lisp primer
 .. However there is a very good reason for that, as I'll try to explain in the
 .. next 5 minutes.
 
-.. TODO: should I put homoiconocity only in the next slide?
+.. TODO: should I put homoiconicity only in the next slide?
 
 - invented by McCarthy in 1958
 - lots of parentheses
-- *homoiconocity*
+- *homoiconicity*
 
 .. this is the first silly example of a function in Lisp, first we define
 .. a factorial function and then we evaluate it.
@@ -134,7 +134,7 @@ Lisp
    is printed by PRINT.
 
 - very minimal syntax
-- *homoiconocity*
+- *homoiconicity*
 
 
 .. code:: cl
