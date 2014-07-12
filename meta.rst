@@ -97,12 +97,22 @@ A Lisp primer
 - lots of parentheses
 - *homoiconocity*
 
-.. TODO: show a simple Lisp function
+.. this is the first silly example of a function in Lisp, first we define
+.. a factorial function and then we evaluate it.
+
+.. TODO: go in the terminal and show this happening live as well
+.. also nothing that the same call to factorial 1000 in Python
+.. would easily blow up the stack trace.
 
 .. code:: cl
 
    (defun factorial(n) 
      (if (<= n 1) 1 (* n (factorial (- n 1)))))
+
+   ;; s-expression to evaluate factorial of 10
+   (factorial 10)
+   
+Here I'm using sbcl_ as interpreter.
 
 Lisp
 ====
@@ -354,6 +364,7 @@ Useful resources
 .. _`metaprogramming answer`: http://stackoverflow.com/questions/2565572/metaprogramming-self-explanatory-code-tutorials-articles-books/2566561#2566561
 .. _`python-3-patterns-metaprogramming`: http://python-3-patterns-idioms-test.readthedocs.org/en/latest/Metaprogramming.html
 .. _macropy: https://github.com/lihaoyi/macropy
+.. _sbcl: http://www.sbcl.org/
 
 - `what made lisp different`_
 - `revenge of the nerds`_
@@ -362,5 +373,6 @@ Useful resources
 - `python decorators and lisp macros`_
 - `metaprogramming answer`_
 - `python-3-patterns-metaprogramming`_
+- `sbcl_`
 
 .. TODO: add a link about the other decorator talks
