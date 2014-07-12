@@ -206,13 +206,33 @@ Metaprogramming in Lisp
 Macros
 ======
 
-.. How can we do the same thing with a macro
+.. code:: cl
+
+   (defun setq2F (x y z)
+         (progn (setq x z) (setq y z)))
 
 .. code:: cl
 
    (defmacro setq2 (v1 v2 e)
        `(progn (setq ,v1 ,e) (setq ,v2 ,e)))
+   
+   (setq2 a b (+ 1 z))
 
+.. TODO: show the evaluation of this thing inside the interpreter
+   ..
+      a
+      11
+      b
+      11
+
+
+.. centered::
+   Can Python do that?
+
+.. the simplest way I found to do this with Python is the following
+.. but hopefully everyone will be disgusted about that as I do :D
+.. It's not even exactly the same however because I need to pass
+.. the variable names and the expression as strings otherwise it won't work.
 
 .. literalinclude:: code/python/meta.py
    :pyobject: setq2
