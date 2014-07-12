@@ -56,7 +56,17 @@ Agenda
 Metaprogramming
 ===============
 
-.. So the definition from Wikipedia is 
+.. From wikipedia the definition of metaprogramming is the writing of computer programs that write
+.. or manipulate other programs as their data, or that do part of the work at compile time
+.. that should otherwise be done at runtime.
+
+.. Lisp macros come in the first category while the standard use of decorators in Python
+.. goes into the second category.
+
+.. TODO: sync what said here with the definition below
+.. Why on earth would you do that? Usually the answer is not much about performance
+.. or better design, but just to have a better way to express domain specific problems
+.. minimizing the number of lines of code and making the programs more expressive and flexible.
 
 .. centered::
    Metaprogramming is the writing of computer programs that write or manipulate other programs (or themselves) as their data, or that do part of the work at compile time that would otherwise be done at runtime.
@@ -71,13 +81,21 @@ Metaprogramming
 A Lisp primer
 =============
 
-.. TODO: other possible homoiconic languages are also Forth and Rebol
-.. where the programming language itself has a first-class data type
+.. In computer terms Lisp is the grandpa of all languages we currently use
+.. it was created in the far 1958 by John McCarthy, and it had a massive
+.. influence on every other language that came next, there are even new
+.. and modern languages like Clojure that took heavily inspiration from it.
 
-.. TODO: the reason why I want to show some Lisp
+.. When people that never used Lisp think about it they think about the massive
+.. amount parentheses used, which looks weird and unnecessary in modern languages.
+.. However there is a very good reason for that, as I'll try to explain in the
+.. next 5 minutes.
 
-- why we show Lisp code
-- explain the homoconoic thing
+.. TODO: should I put homoiconocity only in the next slide?
+
+- invented by McCarthy in 1958
+- lots of parentheses
+- *homoiconocity*
 
 .. TODO: show a simple Lisp function
 
