@@ -430,6 +430,28 @@ Enforce good practices
 
 .. Another interesting example of metaclasses is whenever you want to enforce good practices
 
+.. centered::
+   Problem: make sure that all the subclasses call the super on the __init__ method.
+
+
+Without metaclasses:
+
+.. literalinclude:: code/python/good_practice.py
+   :pyobject: EnforceInitSimple
+
+
+**every method needs to have the check!**
+
+Enforce good practices 2
+========================
+
+.. literalinclude:: code/python/tests.py
+   :pyobject: TestForceCallingSuper
+
+.. literalinclude:: code/python/good_practice.py
+   :pyobject: CheckInit
+
+
 Debugging and monitoring
 ========================
 

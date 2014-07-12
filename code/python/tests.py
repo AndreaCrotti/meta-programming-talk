@@ -72,6 +72,16 @@ class TestForceCallingSuper(unittest.TestCase):
             good_practice.SubClassForgotSuper()
 
 
+class TestForceCallingSuperNoMeta(unittest.TestCase):
+    def test_super_call(self):
+        class Sub(good_practice.EnforceInitSimple):
+            def __init__(self):
+                self.var = 42
+
+        with self.assertRaises(Exception):
+            Sub().meth()
+
+
 class TestAddMethod(unittest.TestCase):
     def test_add_method_to_class(self):
 

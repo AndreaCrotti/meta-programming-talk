@@ -13,7 +13,7 @@ class CheckInit(type):
 
         def init(self, *args, **kwargs):
             original_init(self, *args, **kwargs)
-            assert hasattr(self, self.flag_variable), "Super init not called"
+            assert hasattr(self, self.flag_variable), "super not called"
 
         classdict['__init__'] = init
         return type.__new__(mcs, name, bases, classdict)
@@ -36,3 +36,14 @@ class SubClassWithSuper(Base):
 class SubClassForgotSuper(Base):
     def __init__(self):
         self.subvar = 100
+
+
+class EnforceInitSimple:
+    _initialed = False
+
+    def __init__(self):
+        self._initialed = True
+
+    def meth(self):
+        if not self._initialed:
+            raise Exception("Forgot to call __init__")
