@@ -198,6 +198,9 @@ Metaprogramming in Lisp
    the way we assign variables basically, so it would like defining
    another way to do assignment in Python to make a parallel.
 
+.. centered::
+   Just write a function right? (not really)
+
 .. code:: cl
 
    (defun setq2F (x y z)
