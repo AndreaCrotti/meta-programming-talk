@@ -15,7 +15,7 @@ Meta Programming
 
 Twitter: **@andreacrotti**
 
-Slides and code: https://github.com/AndreaCrotti/meta
+Slides and code: https://github.com/AndreaCrotti/meta-programming-talk/
 
 JOIN US @Depop
 ==============
