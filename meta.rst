@@ -56,14 +56,17 @@ Agenda
 Metaprogramming
 ===============
 
-.. From wikipedia the definition of metaprogramming is the writing of computer programs that write
-.. or manipulate other programs as their data, or that do part of the work at compile time
+.. From wikipedia the definition of metaprogramming is the writing of
+   computer programs that write
+.. or manipulate other programs as their data, or that do part of the
+   work at compile time
 .. that should otherwise be done at runtime.
 
-.. Lisp macros come in the first category while the standard use of decorators in Python
-.. goes into the second category.
+.. Lisp macros come in the first category while the standard use of
+   decorators in Python goes into the second category.
 
 .. TODO: sync what said here with the definition below
+
 .. Why on earth would you do that? Usually the answer is not much about performance
 .. or better design, but just to have a better way to express domain specific problems
 .. minimizing the number of lines of code and making the programs more expressive and flexible.
@@ -139,9 +142,9 @@ Lisp
 
 .. code:: cl
 
-    ((:name "john" :age 20) (:name "mary" :age 18))
-    ;; 
     (* (sin 1.1) (cos 2.03))
+    (setf expression  (list '* (list 'sin 1.1) (list 'cos 2.03)) ) 
+    (eval expression)
 
 .. In this case above here '* becomes a symbol, and 'sin as well
 .. while the other values are just parsed as numbers as they are
