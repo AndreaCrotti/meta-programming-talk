@@ -16,7 +16,7 @@ class CheckInit(type):
             assert hasattr(self, self.flag_variable), "super not called"
 
         classdict['__init__'] = init
-        return type.__new__(mcs, name, bases, classdict)
+        return super().__new__(mcs, name, bases, classdict)
 
 
 class Base(metaclass=CheckInit):
