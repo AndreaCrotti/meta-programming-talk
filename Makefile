@@ -15,7 +15,7 @@ DROP = $(HOME)/Dropbox/Public/talks
 all: test meta upload
 
 test:
-	nosetests code/python
+	nosetests code
 
 upload:
 	cp -Rv $(BUILDDIR) $(DROP)/

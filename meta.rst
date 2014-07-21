@@ -240,7 +240,7 @@ Macros
 .. It's not even exactly the same however because I need to pass
 .. the variable names and the expression as strings otherwise it won't work.
 
-.. literalinclude:: code/python/meta.py
+.. literalinclude:: code/meta.py
    :pyobject: setq2
 
 .. In Lisp as in Python always keep in mind that meta programming is the
@@ -304,13 +304,13 @@ Timers
 .. implementation, but can I prove it in a repeatable test without modifying the functions?
 .. while checking at the same time that both functions return the same value?
 
-.. literalinclude:: code/python/tests.py
+.. literalinclude:: code/tests.py
     :pyobject: to_time
 
-.. literalinclude:: code/python/tests.py
+.. literalinclude:: code/tests.py
     :pyobject: to_time2
 
-.. literalinclude:: code/python/tests.py
+.. literalinclude:: code/tests.py
     :pyobject: TestTime.test_implementation_1_faster
 
 
@@ -321,7 +321,7 @@ Timers (2)
 .. this decorator actually changes the behavior of the decorated function
 .. making it return something different than it originally did.
 
-.. literalinclude:: code/python/timers.py
+.. literalinclude:: code/timers.py
    :pyobject: timeit_change_signature
 
 .. TODO: should I show an example of class decorator??
@@ -329,11 +329,11 @@ Timers (2)
 Decorated class
 ===============
 
-.. literalinclude:: code/python/tests.py
+.. literalinclude:: code/tests.py
    :pyobject: TestAddMethod.test_add_method_to_class
 
 
-.. literalinclude:: code/python/decorators.py
+.. literalinclude:: code/decorators.py
    :pyobject: add_response
 
 Metaclasses
@@ -375,7 +375,7 @@ Metaclass definition
 Just subclass *type*.
 What are the important methods to use?
 
-.. literalinclude:: code/python/meta.py
+.. literalinclude:: code/meta.py
     :pyobject: SimpleMeta
 
 .. code:: python
@@ -398,7 +398,7 @@ Defining Models
 .. In fact even if Python is dynamically typed a database is not, so if we want
 .. to define the database schema in Python we need to give type information
 
-.. literalinclude:: code/python/models.py
+.. literalinclude:: code/models.py
    :pyobject: ModelNoMeta
 
 - too verbose!
@@ -409,23 +409,23 @@ Defining Models
 Defining Models (2)
 ===================
 
-.. literalinclude:: code/python/tests.py
+.. literalinclude:: code/tests.py
    :pyobject: Simple
 
-.. literalinclude:: code/python/tests.py
+.. literalinclude:: code/tests.py
    :pyobject: TestModels
 
 
 Fields
 ======
 
-.. literalinclude:: code/python/models.py
+.. literalinclude:: code/models.py
    :pyobject: Field
 
 Models metaclass
 ================
 
-.. literalinclude:: code/python/models.py
+.. literalinclude:: code/models.py
    :pyobject: MetaModel
 
 Enforce good practices
@@ -439,7 +439,7 @@ Enforce good practices
 
 Without metaclasses:
 
-.. literalinclude:: code/python/good_practice.py
+.. literalinclude:: code/good_practice.py
    :pyobject: EnforceInitSimple
 
 
@@ -448,10 +448,10 @@ Without metaclasses:
 Enforce good practices 2
 ========================
 
-.. literalinclude:: code/python/tests.py
+.. literalinclude:: code/tests.py
    :pyobject: TestForceCallingSuper
 
-.. literalinclude:: code/python/good_practice.py
+.. literalinclude:: code/good_practice.py
    :pyobject: CheckInit
 
 
