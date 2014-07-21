@@ -15,7 +15,7 @@ Meta Programming
 
 Twitter: **@andreacrotti**
 
-Slides and code: https://github.com/AndreaCrotti/meta-programming-talk/
+https://github.com/AndreaCrotti/meta-programming-talk/
 
 JOIN US @Depop
 ==============
@@ -24,14 +24,16 @@ JOIN US @Depop
 .. roundabout and we are hiring backend Python developers, come and
    talk with me or check out the link there if you are interested.
 
+**Depop is your little shop in your pocket.**
+
+http://depop.com/jobs
+
+
 .. image:: images/hiring.png
-    :height: 600
-    :width: 800
+    :height: 400
     :alt: hiring
 
-.. _hiring: http://depop.com/jobs
 
-hiring_
 
 Agenda
 ======
@@ -57,48 +59,44 @@ Metaprogramming
 ===============
 
 .. From wikipedia the definition of metaprogramming is the writing of
-   computer programs that write
-.. or manipulate other programs as their data, or that do part of the
-   work at compile time
-.. that should otherwise be done at runtime.
+   computer programs that write or manipulate other programs as their
+   data, or that do part of the work at compile time that should
+   otherwise be done at runtime.
 
-.. Lisp macros come in the first category while the standard use of
-   decorators in Python goes into the second category.
-
-.. TODO: sync what said here with the definition below
-
-.. Why on earth would you do that? Usually the answer is not much about performance
-.. or better design, but just to have a better way to express domain specific problems
-.. minimizing the number of lines of code and making the programs more expressive and flexible.
+.. Why on earth would you do that? Usually the reason why you would do
+   that is to have a better way to express domain specific problems
+   minimizing the number of lines of code and making the programs more
+   expressive and flexible.  It's also important to keep in mind
+   however that there is a cost, these powerful techniques if abused
+   can cause maintenance nightmares.
 
 .. centered::
    Metaprogramming is the writing of computer programs that write or manipulate other programs (or themselves) as their data, or that do part of the work at compile time that would otherwise be done at runtime.
 
 *Goals of metaprogramming*:
 
-- minimize SLOC
+- minimize SLOCs
 - gives programs greater flexibility
 
-.. TODO: add what is the goal of metaprogramming
+*At what cost?*
 
 A Lisp primer
 =============
 
 .. In computer terms Lisp is the grandpa of all languages we currently use
-.. it was created in the far 1958 by John McCarthy, and it had a massive
-.. influence on every other language that came next, there are even new
-.. and modern languages like Clojure that took heavily inspiration from it.
+   it was created in the far 1958 by John McCarthy, and it had a massive
+   influence on every other language that came next, there are even new
+   and modern languages like Clojure that took heavily inspiration from it.
 
 .. When people that never used Lisp think about it they think about the massive
-.. amount parentheses used, which looks weird and unnecessary in modern languages.
-.. However there is a very good reason for that, as I'll try to explain in the
-.. next 5 minutes.
+   amount parentheses used, which looks weird and unnecessary in modern languages.
+   However there is a very good reason for that, as I'll try to explain in the
+   next 5 minutes.
 
 .. TODO: should I put homoiconicity only in the next slide?
 
 - invented by McCarthy in 1958
 - lots of parentheses
-- *homoiconicity*
 
 .. this is the first silly example of a function in Lisp, first we define
 .. a factorial function and then we evaluate it.
