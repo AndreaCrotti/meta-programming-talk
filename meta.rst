@@ -141,7 +141,13 @@ Lisp
 .. code:: cl
 
     (* (sin 1.1) (cos 2.03))
+
+.. code:: cl
+
     (setf expression  (list '* (list 'sin 1.1) (list 'cos 2.03)) ) 
+
+.. code:: cl
+
     (eval expression)
 
 .. In this case above here '* becomes a symbol, and 'sin as well
@@ -162,19 +168,12 @@ Lisp Evaluation
    - PRINT
    - LOOP
 
-.. TODO: try to make this graph a bit bigger or add a simple example
-
-.. digraph:: repl
-
-   READ -> EVAL -> PRINT;
-   PRINT -> READ [label="LOOP"];
-
 .. code:: cl
 
    (* 2 (+ 3 4))
 
 .. image:: images/s_expression.png
-    :height: 200
+    :height: 400
     :alt: s_expression
 
 Metaprogramming in Lisp
