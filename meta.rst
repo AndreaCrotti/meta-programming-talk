@@ -409,6 +409,11 @@ Defining Models
 .. In fact even if Python is dynamically typed a database is not, so if we want
    to define the database schema in Python we need to give type information
 
+.. centered:: Want to do this:
+
+.. literalinclude:: code/tests.py
+   :pyobject: Simple
+
 .. literalinclude:: code/models.py
    :pyobject: ModelNoMeta
 
@@ -426,9 +431,15 @@ Defining Models (2)
 .. literalinclude:: code/tests.py
    :pyobject: TestModels
 
+Fields (1)
+==========
 
-Fields
-======
+.. literalinclude:: code/tests.py
+   :pyobject: TestFields
+
+
+Fields (2)
+==========
 
 .. literalinclude:: code/models.py
    :pyobject: Field
@@ -473,10 +484,8 @@ Conclusion
 - the code to implement ORM-style models fits in a slide
 - handle **with care**
 
-Questions
-=========
+.. image:: images/questions.jpg
 
-.. TODO: thanks and put maybe again the slide about recruiting
 
 Useful resources
 ================
@@ -499,7 +508,7 @@ Useful resources
 - `python decorators and lisp macros`_
 - `metaprogramming answer`_
 - `python-3-patterns-metaprogramming`_
-- `sbcl_`
+- `sbcl`_
 - `roots of lisp`_
 
 .. TODO: add a link about the other decorator talks
