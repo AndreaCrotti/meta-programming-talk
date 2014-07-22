@@ -11,13 +11,16 @@ class Simple(models.Model):
 class TestModels(unittest.TestCase):
     def test_model_attribute_create_fields(self):
         s = Simple(y="Hello world")
-        # TODO: have a look at setter and getter to make it even smarter
         self.assertEqual(s.y, "Hello world")
         self.assertEqual(s.x, 0)
 
     def test_unknown_arguments_fail(self):
         with self.assertRaises(Exception):
             Simple(unknown='hello')
+
+    def test_type_checking_on_arguments(self):
+        with self.assertRaises(TypeError):
+            Simple(y=1)
 
 
 class TestFields(unittest.TestCase):

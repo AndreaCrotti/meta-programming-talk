@@ -5,18 +5,18 @@ Implement a very simple Django-like Model with meta classes
 
 class MetaModel(type):
     def __new__(mcl, name, bases, classdict):
-        keywords = {}
+        fields = {}
         for attr, val in classdict.items():
             if isinstance(val, Field):
-                keywords[attr] = val
+                fields[attr] = val
 
         def init(self, **kwargs):
-            unknown = set(kwargs) - set(keywords)
+            unknown = set(kwargs) - set(fields)
             if len(unknown) > 0:
                 raise Exception("Unknown arguments %s" % str(unknown))
 
             for key, val in kwargs.items():
-                new_val = keywords[key].__class__(value=val)
+                new_val = fields[key].__class__(value=val)
                 setattr(self, key, new_val)
 
         classdict['__init__'] = init
@@ -61,5 +61,4 @@ class Model(object, metaclass=MetaModel):
 class ModelNoMeta(object):
     def __init__(self, x=1, y=""):
         self.x = x
-        # TODO: add a type check that you are passing the right thing!
         self.y = y
