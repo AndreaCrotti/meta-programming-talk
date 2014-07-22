@@ -3,7 +3,7 @@ class SimpleMeta(type):
 
 
 def setq2(v1, v2, e):
-    """Call it using
+    """Call it as
 
     setq2('a', 'b', '(1 + 2)')
     """

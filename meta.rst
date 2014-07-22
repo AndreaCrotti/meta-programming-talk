@@ -2,6 +2,9 @@
 Meta Programming
 ================
 
+.. centered::
+*Or interesting ways to shoot yourself in the foot*
+
 .. TODO: check why slime is not loading correctly
 
 .. hi everyone I am Andrea Crotti and I'm going to talk you today about Metaprogramming.
@@ -39,8 +42,9 @@ Agenda
 ======
 
 .. So today we are going to talk about metaprogramming, first by looking at the definition
-.. the giving a very quick taste of Lisp and what metaprogramming means in Lisp
-.. and then finally switching to Python and showing how to achieve it with Python.
+   the giving a very quick taste of Lisp and what metaprogramming means in Lisp
+   and then finally switching to Python and showing how to achieve it with Python.
+
 
 - What is metaprogramming
 - Metaprogramming in Lisp
@@ -53,7 +57,6 @@ Agenda
   + decorators
   + meta classes
   + macros
-
 
 Metaprogramming
 ===============
@@ -510,4 +513,7 @@ This is an easy way to enhance the semantics of a Python program in ways which a
 
 **Not Python3 compatible**
 
-.. and probably very hard to port
+Macropy example
+===============
+
+.. literalinclude:: macropy_samples/point.py

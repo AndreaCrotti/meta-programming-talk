@@ -1,7 +1,6 @@
 import macropy.core.macros
 from macropy.case_classes import macros, case
 
-
 @case
 class Point(x, y):
     pass
