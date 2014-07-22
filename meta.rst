@@ -380,16 +380,19 @@ As
 Metaclass definition
 ====================
 
-Just subclass *type*.
-What are the important methods to use?
+.. centered:: Simplest possible metaclass:
 
 .. literalinclude:: code/meta.py
     :pyobject: SimpleMeta
+
+
+.. centered:: Class using the metaclass:
 
 .. code:: python
 
    class UseMeta(object, metaclass=SimpleMeta):
        pass
+
 
 Defining Models
 ===============
@@ -398,13 +401,13 @@ Defining Models
    everyone used, a model definition.
 
 .. Every web framework allows to define models in a nice and compact way.
-.. Let's see how we can define a model without having meta classes.
+   Let's see how we can define a model without having meta classes.
 
 .. Every web framework or ORM uses similar techniques to define database model
-.. straight away from Python.
+   straight away from Python.
 
 .. In fact even if Python is dynamically typed a database is not, so if we want
-.. to define the database schema in Python we need to give type information
+   to define the database schema in Python we need to give type information
 
 .. literalinclude:: code/models.py
    :pyobject: ModelNoMeta
