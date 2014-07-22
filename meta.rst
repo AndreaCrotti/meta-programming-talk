@@ -263,7 +263,7 @@ Metaprogramming in Python
 - function decorators
 - class decorators
 - metaclasses
-- AST manipulation?
+- AST manipulation
 
 .. - why one and why the other? (implicit vs explicit)
 
@@ -476,6 +476,21 @@ Enforce good practices 2
 .. literalinclude:: code/good_practice.py
    :pyobject: CheckInit
 
+
+AST fun
+=======
+
+.. literalinclude:: code/ast_fun.py
+   :pyobject: remove_hello
+
+..
+   Module(body=[
+       FunctionDef(name='function_hello', args=arguments(args=[], vararg=None, kwonlyargs=[], kw_defaults=[], kwarg=None, defaults=[]), body=[
+           Expr(value=Call(func=Name(id='print', ctx=Load()), args=[
+               Str(s='hello world'),
+             ], keywords=[], starargs=None, kwargs=None)),
+         ], decorator_list=[], returns=None),
+     ])
 
 Conclusion
 ==========

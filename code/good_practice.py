@@ -23,7 +23,6 @@ class Base(metaclass=CheckInit):
     flag_variable = 'var'
 
     def __init__(self):
-        # TODO: try to use a boolean variable instead for this
         self.var = 42
 
 
