@@ -2,8 +2,7 @@
 Meta Programming
 ================
 
-.. centered::
-*Or interesting ways to shoot yourself in the foot*
+.. centered:: *Or interesting ways to shoot yourself in the foot*
 
 .. TODO: check why slime is not loading correctly
 
@@ -224,6 +223,10 @@ Macros
    
    (setq2 a b (+ 1 z))
 
+..
+   The thing above is the same as this
+   (list 'progn (list 'setq v1 e) (list 'setq v2 e)))
+
 .. TODO: show the evaluation of this thing inside the interpreter
    ..
       a
@@ -321,10 +324,17 @@ Timers (2)
 .. this decorator actually changes the behavior of the decorated function
 .. making it return something different than it originally did.
 
-.. literalinclude:: code/timers.py
+.. literalinclude:: code/decorators.py
    :pyobject: timeit_change_signature
 
 .. TODO: should I show an example of class decorator??
+
+Timers (3)
+==========
+
+.. literalinclude:: code/decorators.py
+   :pyobject: timeit_print
+
 
 Decorated class
 ===============
@@ -339,11 +349,11 @@ Decorated class
 Metaclasses
 ===========
 
-.. TODO: Should I explain the difference between Python2 and Python3? (maybe or maybe not)
-
-.. Before we talk about metaclasses it is worth to mention that while they are very powerful
-.. they are also in most of the cases not necessary, and if overused they might cause
-.. serious maintainability issues, your present and future colleagues might hate you very hard.
+.. Before we talk about metaclasses it is worth to mention that while
+   they are very powerful they are also in most of the cases not
+   necessary, and if overused they might cause serious maintainability
+   issues, your present and future colleagues might hate you very
+   hard.
 
 - every class type is *type*
 
@@ -357,8 +367,6 @@ Equivalent to:
 .. code:: python
 
     C = type('C', (), {})
-
-Create a method as well
 
 
 .. (Metaclass is the type of the class as a class is the type of an instance).
@@ -453,13 +461,6 @@ Enforce good practices 2
 
 .. literalinclude:: code/good_practice.py
    :pyobject: CheckInit
-
-
-.. TODO: this can be a bonus it's not really necessary for now
-..
-   Debugging and monitoring
-   ========================
-
 
 
 Conclusion
