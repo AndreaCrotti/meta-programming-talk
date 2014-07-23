@@ -213,8 +213,6 @@ Metaprogramming in Lisp
 Macros
 ======
 
-.. rst-class:: build
-
 .. code:: cl
 
    (defun setq2F (x y z)
@@ -262,10 +260,6 @@ Macros
 Metaprogramming in Python
 =========================
 
-.. TODO: explain what is metaprogramming and what is NOT metaprogramming
-
-.. Is Python homoiconic?
-
 .. we now are going to show some examples of meta programming in Python
    using function decorators, class decorators and meta classes
 
@@ -276,15 +270,9 @@ Metaprogramming in Python
 
 .. - why one and why the other? (implicit vs explicit)
 
-.. TODO: add also about descriptors, Dynamic Code generation and AST manipulation
-.. TODO: also remember that the more in depth you go (see AST) the more likely
-   to have things that only work on a certain implementation
 
 Decorators
 ==========
-
-.. TODO: explain something about higher level functions and partial application
-.. TODO: decorators are in Python just nice syntactic sugar for higher order functions
 
 - function decorators
 - class decorators
