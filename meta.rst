@@ -157,18 +157,20 @@ Lisp
 
 .. When all the functions are infix it is much easier
 
+.. rst-class:: build
+
+Homoiconic Python:
+
+.. code:: python
+
+   [def, "function", ("arg", ), pass]
+
 Lisp Evaluation
 ===============
 
 .. make a nice graph about the REPL loop
-.. The real power of Lisp is that it's possible to simply write S-expressions
-.. which are understood without the need of parsing them
-
-..
-   - READ
-   - EVAL
-   - PRINT
-   - LOOP
+   The real power of Lisp is that it's possible to simply write S-expressions
+   which are understood without the need of parsing them
 
 .. code:: cl
 
@@ -182,12 +184,12 @@ Metaprogramming in Lisp
 =======================
 
 .. So now let's get to the real reason why I talked to you about Lisp
-.. which is the way you can do meta programming with it.
+   which is the way you can do meta programming with it.
 
 .. Thanks to the fact that Lisp is Homoiconic as we have seen before
-.. Lisp has probably the most powerful way to do meta programming,
-.. which is Lisp macros.
-.. In lisp we have a function called setq to assign variables.
+   Lisp has probably the most powerful way to do meta programming,
+   which is Lisp macros.
+   In lisp we have a function called setq to assign variables.
 
 .. code:: cl
 
