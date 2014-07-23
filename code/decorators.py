@@ -3,6 +3,8 @@ from functools import wraps
 
 
 def add_response(cls):
+    """Add a method called response to the class
+    """
     cls.response = lambda self: 42
     return cls
 

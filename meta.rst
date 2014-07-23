@@ -211,10 +211,14 @@ Metaprogramming in Lisp
 Macros
 ======
 
+.. rst-class:: build
+
 .. code:: cl
 
    (defun setq2F (x y z)
          (progn (setq x z) (setq y z)))
+
+.. rst-class:: build
 
 .. code:: cl
 
@@ -234,21 +238,24 @@ Macros
       b
       11
 
+.. rst-class:: build
 
 .. centered::
    Can Python do that?
 
 .. the simplest way I found to do this with Python is the following
-.. but hopefully everyone will be disgusted about that as I do :D
-.. It's not even exactly the same however because I need to pass
-.. the variable names and the expression as strings otherwise it won't work.
+   but hopefully everyone will be disgusted about that as I do :D
+   It's not even exactly the same however because I need to pass
+   the variable names and the expression as strings otherwise it won't work.
+
+.. rst-class:: build
 
 .. literalinclude:: code/meta.py
    :pyobject: setq2
 
 .. In Lisp as in Python always keep in mind that meta programming is the
-.. ultimate resource and it should be used only if you know what you're doing
-.. even if used well it will help a lot.
+   ultimate resource and it should be used only if you know what you're doing
+   even if used well it will help a lot.
 
 Metaprogramming in Python
 =========================
@@ -258,7 +265,7 @@ Metaprogramming in Python
 .. Is Python homoiconic?
 
 .. we now are going to show some examples of meta programming in Python
-.. using function decorators, class decorators and meta classes
+   using function decorators, class decorators and meta classes
 
 - function decorators
 - class decorators
@@ -313,6 +320,8 @@ Timers
 .. literalinclude:: code/tests.py
     :pyobject: to_time2
 
+.. rst-class:: build
+
 .. literalinclude:: code/tests.py
     :pyobject: TestTime.test_implementation_1_faster
 
@@ -342,6 +351,7 @@ Decorated class
 .. literalinclude:: code/tests.py
    :pyobject: TestAddMethod.test_add_method_to_class
 
+.. rst-class:: build
 
 .. literalinclude:: code/decorators.py
    :pyobject: add_response
@@ -414,6 +424,8 @@ Defining Models
 .. literalinclude:: code/tests.py
    :pyobject: Simple
 
+.. rst-class:: build
+
 .. literalinclude:: code/models.py
    :pyobject: ModelNoMeta
 
@@ -427,6 +439,8 @@ Defining Models (2)
 
 .. literalinclude:: code/tests.py
    :pyobject: Simple
+
+.. rst-class:: build
 
 .. literalinclude:: code/tests.py
    :pyobject: TestModels
@@ -472,6 +486,8 @@ Enforce good practices 2
 
 .. literalinclude:: code/tests.py
    :pyobject: TestForceCallingSuper
+
+.. rst-class:: build
 
 .. literalinclude:: code/good_practice.py
    :pyobject: CheckInit
