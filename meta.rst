@@ -296,6 +296,9 @@ Decorators
 Timers
 ======
 
+.. centered::
+   Problem: measure time spent in a function
+
 .. literalinclude:: code/decorators.py
    :pyobject: timeit_print
 
@@ -332,6 +335,9 @@ Timers (3)
 
 Decorated class
 ===============
+
+.. centered::
+   Problem: add a method to many classes.
 
 .. literalinclude:: code/tests.py
    :pyobject: TestAddMethod.test_add_method_to_class
