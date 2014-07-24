@@ -410,7 +410,7 @@ Defining Models
 .. In fact even if Python is dynamically typed a database is not, so if we want
    to define the database schema in Python we need to give type information
 
-.. centered:: Want to do this:
+.. centered:: Problem: define models in a concise and simple way
 
 .. literalinclude:: code/tests.py
    :pyobject: Simple
