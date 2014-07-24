@@ -32,7 +32,7 @@ def timeit_print(func):
         before = datetime.utcnow()
         ret = func(*args, **kwargs)
         after = datetime.utcnow()
-        print("{} took {} seconds to run".format(func, after - before))
+        print("{} seconds to run".format(func, after - before))
         return ret
 
     return _timeit_print

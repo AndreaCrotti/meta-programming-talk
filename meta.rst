@@ -55,7 +55,7 @@ Agenda
 
   + decorators
   + meta classes
-  + macros
+  + AST
 
 Metaprogramming
 ===============
@@ -95,8 +95,6 @@ A Lisp primer
    However there is a very good reason for that, as I'll try to explain in the
    next 5 minutes.
 
-.. TODO: should I put homoiconicity only in the next slide?
-
 - invented by McCarthy in 1958
 - lots of parentheses
 
@@ -114,9 +112,6 @@ A Lisp primer
 
    ;; s-expression to evaluate factorial of 10
    (factorial 10)
-
-.. TODO: for my examples I'm just showing SBCL but any common lisp interpreter
-.. will do
 
 Lisp
 ====
@@ -157,9 +152,10 @@ Lisp
 
 .. When all the functions are infix it is much easier
 
-.. rst-class:: build
 
-Homoiconic Python:
+Homoiconic Python??
+
+.. rst-class:: build
 
 .. code:: python
 
@@ -300,6 +296,13 @@ Decorators
 Timers
 ======
 
+.. literalinclude:: code/decorators.py
+   :pyobject: timeit_print
+
+
+Timers (2)
+==========
+
 .. I think there are no doubts that the first implementation is faster than the second
 .. implementation, but can I prove it in a repeatable test without modifying the functions?
 .. while checking at the same time that both functions return the same value?
@@ -315,8 +318,7 @@ Timers
 .. literalinclude:: code/tests.py
     :pyobject: TestTime.test_implementation_1_faster
 
-
-Timers (2)
+Timers (3)
 ==========
 
 .. It is particularly important to do this change only at run-time because
@@ -327,13 +329,6 @@ Timers (2)
    :pyobject: timeit_change_signature
 
 .. TODO: should I show an example of class decorator??
-
-Timers (3)
-==========
-
-.. literalinclude:: code/decorators.py
-   :pyobject: timeit_print
-
 
 Decorated class
 ===============
