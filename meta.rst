@@ -4,8 +4,6 @@ Meta Programming
 
 .. centered:: *Or interesting ways to shoot yourself in the foot*
 
-.. TODO: check why slime is not loading correctly
-
 .. hi everyone I am Andrea Crotti and I'm going to talk you today about Metaprogramming.
 .. you can find me on twitter here and you can also find the source of these slides
 .. and all the code I am going to show now there.
@@ -101,9 +99,9 @@ A Lisp primer
 .. this is the first silly example of a function in Lisp, first we define
 .. a factorial function and then we evaluate it.
 
-.. TODO: go in the terminal and show this happening live as well
-.. also nothing that the same call to factorial 1000 in Python
-.. would easily blow up the stack trace.
+.. Go in the terminal and show this happening live as well
+   also nothing that the same call to factorial 1000 in Python
+   would easily blow up the stack trace.
 
 .. code:: cl
 
@@ -227,12 +225,6 @@ Macros
    The thing above is the same as this
    (list 'progn (list 'setq v1 e) (list 'setq v2 e)))
 
-.. TODO: show the evaluation of this thing inside the interpreter
-   ..
-      a
-      11
-      b
-      11
 
 .. rst-class:: build
 
@@ -330,8 +322,6 @@ Timers (3)
 
 .. literalinclude:: code/decorators.py
    :pyobject: timeit_change_signature
-
-.. TODO: should I show an example of class decorator??
 
 Decorated class
 ===============
@@ -533,12 +523,8 @@ Useful resources
 - `sbcl`_
 - `roots of lisp`_
 
-.. TODO: add a link about the other decorator talks
-
 Macropy
 =======
-
-.. TODO: show some shocking examples about it
 
 From macropy_ website:
 
